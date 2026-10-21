@@ -1,0 +1,40 @@
+{
+   "name": "tp-07-salas-mongodb",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "start": "node src/index.js",
+      "start:local": "node --env-file=.env src/index.js",
+      "format": "prettier --write src scripts",
+      "format:check": "prettier --check src scripts",
+      "lint": "eslint src scripts",
+      "check": "npm run format:check && npm run lint",
+      "db:probar": "node --env-file=.env scripts/comprobar-conexion.js",
+      "db:crear": "node --env-file=.env scripts/crear-reserva.js",
+      "db:listar": "node --env-file=.env scripts/listar-reservas.js",
+      "db:validar":"node --env-file=.env scripts/validar-reserva.js"
+   },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/ErikBel404/tp-07-salas-mongodb-.git"
+   },
+   "keywords": [],
+   "type": "commonjs",
+   "bugs": {
+      "url": "https://github.com/ErikBel404/tp-07-salas-mongodb-.git/issues"
+   },
+   "homepage": "https://github.com/ErikBel404/tp-07-salas-mongodb-.git#readme",
+   "dependencies": {
+      "ejs": "^6.0.1",
+      "express": "^5.2.1",
+      "express-ejs-layouts": "^2.5.1",
+      "mongoose": "^9.11.2",
+      "morgan": "^1.12.1"
+   },
+   "devDependencies": {
+      "@eslint/js": "^10.0.1",
+      "eslint": "^10.11.0",
+      "prettier": "^3.9.9"
+   }
+}
